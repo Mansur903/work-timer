@@ -1,5 +1,3 @@
-# work-timer
-
 # Getting started: 
 * cd server
 * `npm install`
