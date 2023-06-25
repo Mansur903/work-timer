@@ -1,15 +1,16 @@
 require('dotenv').config()
-const express = require('express')
-const sequelize = require('./db')
-const models = require('./models/models')
-const PORT = process.env.PORT || 6000
+import express, {Express, Request, Response} from 'express'
+import {sequelize} from './db'
+import './models/models'
+
+const PORT = process.env.PORT || 8000
 const cors = require('cors')
 
-const app = express()
+const app: Express = express()
 app.use(cors())
 app.use(express.json())
 
-app.get('/', (req, res) => {
+app.get('/', (req: Request, res: Response) => {
 	res.status(200).json({message: 'WORKING!!!'})
 })
 
@@ -23,4 +24,10 @@ const start = async () => {
 	}
 }
 
+app.get('/', (req: Request, res: Response) => {
+	res.send('WORKING!!!');
+});
+
 start()
+
+//
