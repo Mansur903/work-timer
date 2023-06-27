@@ -1,7 +1,9 @@
 import Router from 'express'
-const router = Router()
 import userRouter from './userRouter'
 
+const router = Router()
+
+router.use('/home', homeRouter)
 router.use('/user', userRouter)
 
 export default router

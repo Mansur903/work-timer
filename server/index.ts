@@ -29,5 +29,3 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 start()
-
-//
